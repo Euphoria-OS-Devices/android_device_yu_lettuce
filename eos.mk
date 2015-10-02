@@ -14,10 +14,10 @@
 
 $(call inherit-product, device/yu/lettuce/full_lettuce.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common eos stuff.
+$(call inherit-product, vendor/eos/config/common_full_phone.mk)
 
-PRODUCT_NAME := cm_lettuce
+PRODUCT_NAME := eos_lettuce
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := lettuce
 
@@ -33,3 +33,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=YU/YUPHORIA/YUPHORIA:5.0.2/LRX22G/YNG1TBS2P2:user/release-keys \
     PRIVATE_BUILD_DESC="YUPHORIA-user 5.0.2 LRX22G YNG1TBS2P2 release-keys"
 endif
+
+PRODUCT_COPY_FILES += \
+    vendor/eos/prebuilt/common/bootanimations/BOOTANIMATION-1280x768.zip:system/media/bootanimation.zip
